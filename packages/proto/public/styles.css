@@ -1,0 +1,11 @@
+
+div.poster {
+    width: 500px;
+    height: 1050px;
+    background-color: gray;
+}
+
+div.poster img.album-cover {
+    width: 500px;
+    height: auto;
+}
