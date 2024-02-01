@@ -3,20 +3,32 @@
     <head>
         <title>Toolbar</title>
         <link rel="stylesheet" href="styles.css" type="text/css">
+        <link rel="stylesheet" href="styles/page.css" type="text/css">
+        <link rel="stylesheet" href="styles/reset.css" type="text/css">
+        <link rel="stylesheet" href="styles/form.css" type="text/css">
+        <link rel="stylesheet" href="styles/tokens.css" />
     </head>
     <body>
-        <a href="index.html">back</a>
-        <input type="text" placeholder="Search for any album...">
-        <select>
-            <option>Colored Theme</option>
-            <option>Light Theme</option>
-            <option selected>Dark Theme (the best)</option>
-        </select>
-        <select>
-            <option>9x11 (size for an ok album)</option>
-            <option>12x18 (size for a pretty good album)</option>
-            <option selected>24x36 (size for a GREAT album)</option>
-        </select>
-        <button>Generate</button>
+        <header>Form</header>
+        <main>
+            <a href="index.html">back</a>
+            <div class="form-options">
+                <label>1. Select your current favorite album below</label>
+                <input type="text" placeholder='"the beatles abbey road", "taylor swift folklore", ...'>
+                <label>2. Select your poster theme (colored / light / dark)</label>
+                <select>
+                    <option>Colored Theme</option>
+                    <option>Light Theme</option>
+                    <option selected>Dark Theme (the best)</option>
+                </select>
+                <label>3. Select your poster size (9x11 / 12x18 / 24x36)</label>
+                <select>
+                    <option>9x11 (size for an ok album)</option>
+                    <option>12x18 (size for a pretty good album)</option>
+                    <option selected>24x36 (size for a GREAT album)</option>
+                </select>
+                <button class="generate-button">Generate</button>
+            </div>
+        </main>
     </body>
 </html>

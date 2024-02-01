@@ -1,0 +1,8 @@
+div.form-options {
+    display: flex;
+    flex-direction: column;
+}
+
+button.generate-button {
+    margin-top: 30px;
+}

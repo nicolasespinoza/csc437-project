@@ -1,0 +1,48 @@
+body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background-color: var(--color-background-page);
+}
+
+header {
+    font-family: 'Luxurious Roman', Times New Roman, Georgia, serif;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: var(--color-accent);
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+button {
+    background-color: var(--color-highlight);
+}
+
+select, input, button {
+    padding: 10px 7px;
+    border-radius: 2px;
+    border: none;
+    width: 350px;
+    box-sizing: border-box;
+}
+
+label {
+    color: var(--color-accent);
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+main {
+    padding: 10px;
+}
+
+svg.icon {
+    display: inline;
+    height: 1.5em;
+    width: 1.5em;
+    vertical-align: top;
+    color: var(--color-accent);
+}
