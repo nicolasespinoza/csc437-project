@@ -1,0 +1,17 @@
+:root {
+    --color-accent: #DFC473;
+    --color-background-page: #1B2027;
+    --color-highlight: #FFE500;
+
+    --color-background-light-theme: #EDEBE5;
+
+    /*From k */
+    --size-spacing-medium: 0.5rem;
+    --color-border-control: var(--color-accent);
+    --color-background-control: #ccc;
+    --time-transition-control: 300ms;
+    --color-foreground-control: #fff;
+}
+
+
+
