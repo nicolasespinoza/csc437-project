@@ -11,6 +11,11 @@ header {
     background-color: var(--color-accent);
 }
 
+header p {
+    display: inline-block;
+    color: var(--color-header-text);
+}
+
 header user-panel {
     position: absolute;
     right: 200px;
@@ -28,7 +33,7 @@ button {
 select, input, button {
     padding: 10px 7px;
     border-radius: 2px;
-    border: none;
+    border: 1px solid gray;
     width: 350px;
     box-sizing: border-box;
 }
@@ -49,5 +54,5 @@ svg.icon {
     height: 1.5em;
     width: 1.5em;
     vertical-align: top;
-    color: var(--color-accent);
+    color: var(--color-header-text);
 }

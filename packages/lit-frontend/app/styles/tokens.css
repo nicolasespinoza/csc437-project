@@ -1,6 +1,9 @@
 :root {
+    --color-goldish: #DFC473;
+
     --color-accent: #DFC473;
     --color-background-page: #1B2027;
+    --color-header-text: var(--color-background-page);
     --color-highlight: #FFE500;
 
     --color-background-light-theme: #EDEBE5;
@@ -13,5 +16,11 @@
     --color-foreground-control: #fff;
 }
 
+body.light-mode {
+    --color-accent: #1B2027;
+    --color-background-page: white;
+
+    --color-header-text: var(--color-goldish);
+}
 
 

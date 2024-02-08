@@ -5,9 +5,12 @@
         <script type="module" src="drop-down.ts"></script>
         <script type="module" src="user-panel.ts"></script>
         <script type="module" src="toggle-switch.ts"></script>
+        <script type="module" src="page-card.ts"></script>
+        <script type="module" src="cards-container.ts"></script>
         <script type="module" src="scripts/toggle-theme.ts"></script>
 
         <link rel="stylesheet" href="styles/page.css" />
+        <link rel="stylesheet" href="styles/index.css" />
         <link rel="stylesheet" href="styles/reset.css" />
         <link rel="stylesheet" href="styles/tokens.css" />
 
@@ -17,20 +20,29 @@
     </head>
     <body>
         <header>
-            Index
+            <p>Index</p>
             <user-panel></user-panel>
         </header>
         <main>
-            <svg class="icon">
-                <use href="icons/icons.svg#form-icon" />
-            </svg>
-            <a href="form.html"> The form / parameters for generating the poster</a>
-            <br>
-            <br>
-            <svg class="icon">
-                <use href="icons/icons.svg#poster-icon" />
-            </svg>
-            <a href="poster.html">The render / preview of how the poster will look based on the form</a>
+            <cards-container>
+                <page-card>
+                    <p slot="title">
+                        <svg class="icon">
+                            <use href="icons/icons.svg#form-icon" />
+                        </svg>
+                        <a href="form.html">form.html</a></p>
+                    <p slot="description">The form / parameters for generating the poster</p>
+                </page-card>
+
+                <page-card>
+                    <p slot="title">
+                        <svg class="icon">
+                            <use href="icons/icons.svg#poster-icon" />
+                        </svg>
+                        <a href="poster.html">poster.html</a></p>
+                    <p slot="description">The form / parameters for generating the poster</p>
+                </page-card>
+            </cards-container>
         </main>
     </body>
 </html>

@@ -22,9 +22,10 @@ export class ToggleSwitchElement extends LitElement {
     label {
       display: flex;
       width: 100%;
-      justify-content: space-between;
+      //justify-content: space-between;
       align-items: center;
       gap: var(--size-spacing-medium);
+      color: var(--color-accent);
       line-height: 2em;
     }
     .slider {
@@ -61,8 +62,12 @@ export class ToggleSwitchElement extends LitElement {
 
     _handleChange(ev: Event) {
         const target = ev.target as HTMLInputElement;
+        const composedEvent = new Event(ev.type, {
+            bubbles: true,
+            composed: true
+        });
+
         this.on = target?.checked;
-
-
+        this.dispatchEvent(composedEvent);
     }
 }

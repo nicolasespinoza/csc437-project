@@ -14,55 +14,51 @@ export class DropDownElement extends LitElement {
         @change=${this._handleChange}
         .checked=${this.open} />
       <label for="is-shown">
-        <slot>Menu</slot>
+        <slot name="label" style="color: var(--color-header-text)">Menu</slot>
       </label>
-      <slot name="menu">
-        <ul>
-            <li><toggle-switch id="toggle-theme-switch">Light/Dark Theme</toggle-switch></li>
-          <li><a href="https://google.com">My Profile</a></li>
-            <li><a href="https://google.com">Sign Out</a></li>
-        </ul>
-      </slot>
+      <div class="menu">
+        <slot></slot>
+      </div>
     `;
     }
 
     static styles = css`
-    :host {
-      display: inline-block;
-      position: relative;
-    }
+      :host {
+        display: inline-block;
+        position: relative;
+      }
 
-    #is-shown {
-      display: none;
-    }
+      #is-shown {
+        display: none;
+      }
 
-    label {
-      cursor: pointer;
-    }
+      label {
+        cursor: pointer;
+      }
 
-    slot[name="menu"] {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      border: 1px solid;
-      background: white;
-    }
+      .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border: 1px solid;
+        background: white;
+      }
 
-    #is-shown:checked ~ slot[name="menu"] {
-      display: block;
-    }
+      #is-shown:checked ~ .menu {
+        display: block;
+      }
 
-    /* CSS for slotted elements and default slot content */
+      /* CSS for slotted elements and default slot content */
 
-    ::slotted(ul[slot="menu"]),
-    slot[name="menu"] > ul {
-      margin: 0;
-      padding: 0.25em;
-      list-style: none;
-      white-space: nowrap;
-    }
-  `;
+      ::slotted(ul),
+      .menu > slot > ul {
+        margin: 0;
+        padding: 0.25em;
+        list-style: none;
+        white-space: nowrap;
+      }
+    `;
 
     _handleChange(ev: InputEvent) {
         const target = ev.target as HTMLInputElement;
